@@ -48,7 +48,7 @@ X11_read_clip <- function() {
   if (has_xclip()) {
     con <- pipe("xclip -o -selection clipboard")
   } else if (has_xsel()) {
-    con <- pipe("xsel --clipboard")
+    con <- pipe("xsel")
   } else {
     notify_no_cb()
   }
